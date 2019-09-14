@@ -1,9 +1,10 @@
-import React from 'react';
+import React from 'react'; 
+//「スコープ」
 
 function App() {
-  return (
-    <h1>Hello,world!</h1> //JSX:JSを拡張した言語。
-  );
-}
+  const greeting ="Hi!";
+    const dom = <h1 className="foo">{greeting}</h1>; //className = htmlのclass
+    return dom;
+  }
 
 export default App;
