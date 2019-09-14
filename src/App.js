@@ -1,27 +1,18 @@
 import React from 'react'; 
 //「スコープ」
 
-
-// class App extends Component() {
-//   render() { //render() は、レンダリングするためのメソッド
-//   return(
-//       <React.Fragment>  //  <React.Fragment> returnの内側を①つにまとめるdivのような役割
-//       <label htmlFor="bar">
-//         bar
-//         </label>
-//       <input type="text" onChange={()=>{console.log("I am Clicked")}}/>
-//       </React.Fragment>
-//   )
-// }
-// }
-
 const App =()=>{ //関数コンポーネント（functionalCOmponent）
   return (
-  <div><Cat/>
-  <Cat/>    </div>
+  <div>
+    <User name={"Taro"} age={10}/>
+    <User name={"Hanako"} age={5}/>
+  </div>
   )
+// Userに、nameというpropsが与えられ、そのデータはTaro
   }
- const Cat =()=>
- <div>Meow!</div>
+ const User =(props)=>{
+return <div>Hi, I am {props.name}, and {props.age}years old!</div> 
+// propsの中身の数だけ繰り返して描かれる
+ }
 
 export default App;
